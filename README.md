@@ -19,30 +19,47 @@ HOW TO USE
 **Use methods and properties**
 
 *+(WIZPurchaseHelper\*)sharedInstance*
+
 Call singleton
 
+
 *- (void)validateProductIdentifiers:(NSArray \*)productIdentifiers*
+
 Initiate the helper and return a list of products
 
+
 *- (BOOL)canMakePayments*
+
 Check available payment
 
+
 *- (void)payWithIdentefier:(NSString\*)identifier*
+
 Creates a purchase request
 
+
 *- (void)refreshReceipt*
+
 Restore old purchases
+
 
 **Use delegate**
 
 *-(void)WIZPurchaseHelperProducts:(NSArray<SKProduct \*>\*)products;*
+
 Return list of products
 
+
 *-(void)WIZPurchaseHelperPaymentComplete:(NSString\*)identifier*
+
 Tells what purchase was made or a product restore
 
+
 *-(void)WIZPurchaseHelperPaymentFailedProductIdentifier:(NSString\*)identifier error:(NSError\*)error*
+
 Tells what purchase return error
 
+
 *-(void)WIZPurchaseHelperCallPromotedPurchase:(NSString\*)identifier*
+
 Called when a promoting purchase is made
